@@ -1,0 +1,30 @@
+.main{
+    background-color: antiquewhite;
+    border: 2px solid black;
+    padding: 50px 30px;
+    width: 30%;
+    text-align: center;
+    position: relative;
+    left: 35%;
+    margin-top: 10%;
+    border-radius: 20px;
+}
+.slide-container{
+    background-color: brown;
+    border: 2px black;
+    color: aquamarine;
+    width: 40%;
+    position: relative;
+    left: 30%;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+.price-slider{
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bolder;
+}
+#testing{
+    margin-top: 10px;
+    padding: 20px 10px;
+}

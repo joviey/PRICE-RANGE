@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=width-content , intial-scale=1.0">
+    <title>price ranger slider</title>
+    <link rel="stylesheet" text="text/css" href="style.css">
+</head>
+
+<body>
+    <section class="main">
+        <p class="sub1">GeeksForGeeks</p>
+        <h1 class="sub2">Price Range Slider</h1>
+        <form name="myform">
+            <label for="min">minimum price</label>
+            <input type="number" class="min" name="minPrice" value="2500"><br><br>
+            <label for="max">maximum price</label>
+            <input type="number" class="max" name="maxprice" value="8500"><br><br>
+        </form>
+        <div class="slide-container">
+            <div class="price-slider">slide</div>
+        </div>
+        <div id="testing">
+            <button id="testbtt">testing</button>
+            <p id="demo"></p>
+        </div>
+    </section>
+    <script>
+        document.getElementById("testbtt").addEventListener("click", myFunction);
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "it is working";
+        }
+
+        function validateslide(event) {
+            console.log(+event?.target?.value)
+            if (+event?.target?.value < 2000) {
+                document.querySelector(".slide-container").style.color = "blue"
+            }
+            else if(+event?.target?.value > 6000){
+                document.querySelector(".slide-container").style.color = "black"
+            }
+        }
+        let x = document.querySelector(".min")
+        let y = document.querySelector(".max")
+
+        x.addEventListener("change", (e) => {
+            console.log(e)
+            validateslide(e)
+        });
+        y.addEventListener("change", (e) => {
+            console.log(e)
+            validateslide(e)
+        });
+    </script>
+</body>
+
+</html>
